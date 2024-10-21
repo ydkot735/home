@@ -1,0 +1,192 @@
+$black: #323232
+$mint: #4D766E
+$grey-green: #688990
+$lite-grey-green: #B6C2CE
+$custom-white: #FAFBFD
+
+body
+    box-sizing: border-box
+    background-color: $mint
+    font-family: "Golos Regular", monospace
+
+@font-face
+    font-family: "Golos Regular"
+    src: url(./assets/font/GolosText-Regular.woff2)
+
+@font-face
+    font-family: "Golos Bold"
+    src: url(./assets/font/GolosText-Bold.woff2)
+
+header
+    height: 100vh
+    width: 25%
+    position: fixed
+    background-color: $black
+    img
+        display: none
+        margin: 30% 0 0 10%
+        width: 75px
+        height: 75px
+    ul
+        margin: 20% 0 0 0
+        padding: 10%
+        a
+            text-decoration: none
+            padding: 2%
+            li
+                list-style: none
+                font-size: 30px
+                color: $custom-white
+            :hover
+                color: $lite-grey-green
+                transition: all 0.5s ease
+
+main
+    width: 75%
+    position: absolute
+    right: 0
+    canvas
+        width: 75%
+
+.firstSection
+    height: 100vh
+    border: slod 1px $black
+    color: $custom-white
+    position: relative
+    overflow: hidden
+    ::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-image: url(/img/cat.png)
+        opacity: 0.05
+        z-index: -1
+
+    &__message
+        padding-top: 37%
+        padding-left: 10%
+        font-size: 40px
+        &__jobtext
+            font-size: 32px
+        &__descriptiontext
+            font-size: 20px
+
+.secondSection
+    background-color: $grey-green
+    padding: 5%
+    &__header
+        font-size: 32px
+        padding: 1%
+        p
+            margin: 1%
+    &__skilsSection
+        padding: 1%
+        margin: 0px 1% 0px 0px
+        &__item
+            border-radius: 10px
+            border: solid white 2px
+            padding: 1%
+            margin: 1%
+            img
+                width: 30px
+                height: 30px
+                margin-right: 1%
+                border: solid black 1px
+                border-radius: 10px
+            &__header
+                display: flex
+                justify-content: start
+                align-items: center
+                font-size: 30px
+                &__name
+                    margin: 1% 0 1% 0
+            &__description
+                font-size: 15px
+
+.thirdSection
+    background-color: $mint
+    padding: 5%
+    color: black
+    &__header
+        font-size: 32px
+        padding: 1% 1% 1% 2%
+    &__projects
+        margin: 1%
+        padding: 1%
+        &__react
+            font-size: 20px
+        &__landings
+            font-size: 20px
+        &__item
+            border-radius: 10px
+            border: solid white 2px
+            padding: 1%
+            margin: 1%
+            :hover
+                color: $custom-white           
+            &__name
+                padding: 1%
+                font-size: 20px
+            &__description
+                padding: 0 0 0 1%
+            &__stack
+                padding: 0 0 0 1%
+            a
+                text-decoration: none
+                color: black
+            &__name
+                font-size: 32px
+
+        
+
+.contacts
+    margin: 40% 10% 0 10%
+    padding: 2%
+    border-radius: 10px
+    color: $custom-white
+    a
+        text-decoration: none
+        color: $black
+    button
+        font-family: "Golos Regular"
+        width: 100%
+        font-size: 26px
+        margin: 1%
+    &__buttons
+        margin-top: 3%
+        display: flex
+        flex-direction: column
+        align-items: center
+        img
+            width: 1em
+            height: 1em
+
+.github:hover
+    p
+        color: white
+        background-color: black
+
+.telegram:hover
+    p
+        color: white
+        background-color: #27a7e7
+        border: solid 1px white
+
+
+.email
+    color: $black
+    
+    
+    
+    
+.email:hover
+    p
+        color: white
+        background-color: #c71610
+
+.ready
+    padding: 8% 0 0 1%
+    color: $custom-white

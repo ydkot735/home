@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .header-svg {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2e8b57;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .content svg {
+            margin: 20px 0;
+            width: 150px;
+            height: 150px;
+        }
+
+        .cta {
+            margin-top: 20px;
+        }
+
+        .cta a {
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta a:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #f4f4f4;
+            color: #777;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .footer-svg {
+            margin-top: 10px;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка письма -->
+        <header>
+            <h1>Добро пожаловать в нашу рассылку!</h1>
+            <svg class="header-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                <path d="M12 2C8.134 2 5 5.134 5 9c0 3.17 2.502 5.778 5.61 8.99L12 21l1.39-3.01C16.498 14.778 19 12.17 19 9c0-3.866-3.134-7-7-7zm0 2c2.761 0 5 2.239 5 5 0 2.38-1.89 4.552-4.328 7.532l-.672.936-.672-.936C8.89 13.552 7 11.38 7 9c0-2.761 2.239-5 5-5zm0 2a1 1 0 100 2 1 1 0 000-2z"/>
+            </svg>
+        </header>
+
+        <!-- Основное содержимое -->
+        <div class="content">
+            <h2>Будьте на связи с нами!</h2>
+            <p>Получайте самые свежие новости, акции и предложения прямо на ваш почтовый ящик. Мы ценим ваше внимание и стараемся радовать вас интересной информацией и выгодными предложениями!</p>
+
+            <!-- SVG декор -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#4CAF50" stroke-width="4">
+                <circle cx="50" cy="50" r="40" stroke-dasharray="10 5"/>
+                <circle cx="50" cy="50" r="20" stroke-dasharray="5 5"/>
+                <line x1="10" y1="50" x2="90" y2="50" />
+                <line x1="50" y1="10" x2="50" y2="90" />
+            </svg>
+
+            <!-- Призыв к действию -->
+            <div class="cta">
+                <a href="#">Подписаться сейчас</a>
+            </div>
+        </div>
+
+        <!-- Подвал письма -->
+        <footer>
+            <p>Если вы больше не хотите получать наши письма, <a href="#">отпишитесь здесь</a>.</p>
+            <svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" fill="#4CAF50" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h-2v-6h2v6zm4 0h-2v-4h2v4z"/>
+            </svg>
+        </footer>
+    </div>
+</body>
+</html>

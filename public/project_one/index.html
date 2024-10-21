@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин Продуктов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff7043;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #ff5722;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .auth-buttons button {
+            background-color: white;
+            color: #ff7043;
+            border: none;
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .auth-buttons button:hover {
+            background-color: #ff5722;
+            color: white;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px 20px;
+            background-color: #fff3e0;
+        }
+
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+        }
+
+        .product svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            margin: 0;
+            font-size: 22px;
+            color: #ff7043;
+        }
+
+        .product p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .price {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff5722;
+        }
+
+        .weight {
+            font-size: 14px;
+            color: #757575;
+        }
+
+        footer {
+            background-color: #ff7043;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Каталог Продуктов</h1>
+        <nav class="nav">
+            <a href="#">Главная</a>
+            <a href="#">О нас</a>
+            <a href="#">Товары</a>
+            <a href="#">Контакты</a>
+            <a href="#">Помощь</a>
+        </nav>
+        <div class="auth-buttons">
+            <button>Авторизация</button>
+            <button>Регистрация</button>
+        </div>
+    </header>
+
+    <!-- Секция с продуктами -->
+    <section class="products">
+        <!-- Продукт 1: Яблоко -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#ff5252">
+                <circle cx="50" cy="50" r="40" />
+                <rect x="45" y="20" width="10" height="30" fill="#4caf50" />
+                <path d="M45 20 Q50 10, 55 20" fill="#ffca28" />
+            </svg>
+            <h3>Яблоки</h3>
+            <p class="price">150 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 2: Хлеб -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#ffeb3b">
+                <rect x="30" y="40" width="40" height="40" rx="20" ry="20" />
+                <circle cx="50" cy="60" r="10" fill="#ff5722" />
+            </svg>
+            <h3>Хлеб</h3>
+            <p class="price">50 ₽</p>
+            <p class="weight">Вес: 500 г</p>
+        </div>
+
+        <!-- Продукт 3: Молоко -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#bbdefb">
+                <rect x="35" y="20" width="30" height="60" rx="5" ry="5" />
+                <polygon points="35,20 50,10 65,20" fill="#e3f2fd" />
+            </svg>
+            <h3>Молоко</h3>
+            <p class="price">90 ₽</p>
+            <p class="weight">Вес: 1 л</p>
+        </div>
+
+        <!-- Продукт 4: Морковь -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#ff9800">
+                <rect x="40" y="30" width="20" height="50" rx="10" ry="10" />
+                <path d="M40 30 Q50 20, 60 30" fill="#4caf50" />
+            </svg>
+            <h3>Морковь</h3>
+            <p class="price">70 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 5: Огурцы -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#4caf50">
+                <ellipse cx="50" cy="50" rx="30" ry="10" />
+                <ellipse cx="50" cy="50" rx="10" ry="30" fill="#81c784" />
+            </svg>
+            <h3>Огурцы</h3>
+            <p class="price">100 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 6: Помидоры -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#ff1744">
+                <circle cx="50" cy="50" r="35" />
+                <rect x="47" y="15" width="6" height="15" fill="#4caf50" />
+            </svg>
+            <h3>Помидоры</h3>
+            <p class="price">120 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 7: Картофель -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#d7ccc8">
+                <ellipse cx="50" cy="50" rx="35" ry="20" />
+            </svg>
+            <h3>Картофель</h3>
+            <p class="price">45 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 8: Лук -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#ffcc80">
+                <ellipse cx="50" cy="60" rx="25" ry="15" />
+                <rect x="47" y="25" width="6" height="20" fill="#8bc34a" />
+            </svg>
+            <h3>Лук</h3>
+            <p class="price">60 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 9: Капуста -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#66bb6a">
+                <circle cx="50" cy="50" r="35" />
+                <circle cx="50" cy="50" r="20" fill="#43a047" />
+            </svg>
+            <h3>Капуста</h3>
+            <p class="price">55 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 10: Бананы -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#ffeb3b">
+                <path d="M40 60 Q50 40, 60 60" stroke="#fbc02d" stroke-width="5" fill="none" />
+                <path d="M35 65 Q50 45, 65 65" stroke="#fbc02d" stroke-width="5" fill="none" />
+            </svg>
+            <h3>Бананы</h3>
+            <p class="price">150 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#ffccbc">
+                <ellipse cx="50" cy="50" rx="30" ry="20" />
+            </svg>
+            <h3>Куриное филе</h3>
+            <p class="price">300 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 12: Рыба -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#90caf9">
+                <ellipse cx="50" cy="50" rx="35" ry="15" />
+                <circle cx="70" cy="50" r="5" fill="#0d47a1" />
+            </svg>
+            <h3>Рыба</h3>
+            <p class="price">400 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 13: Яйца -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#ffffff">
+                <ellipse cx="50" cy="50" rx="20" ry="30" />
+            </svg>
+            <h3>Яйца</h3>
+            <p class="price">70 ₽/десяток</p>
+            <p class="weight">Вес: 10 шт</p>
+        </div>
+
+        <!-- Продукт 14: Сыр -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#ffeb3b">
+                <rect x="20" y="40" width="60" height="40" rx="10" ry="10" />
+            </svg>
+            <h3>Сыр</h3>
+            <p class="price">500 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 15: Масло -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#ffe082">
+                <rect x="30" y="30" width="40" height="40" rx="10" ry="10" />
+            </svg>
+            <h3>Масло</h3>
+            <p class="price">120 ₽/250 г</p>
+            <p class="weight">Вес: 250 г</p>
+        </div>
+
+        <!-- Продукт 16: Гречка -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#8d6e63">
+                <ellipse cx="50" cy="50" rx="30" ry="10" />
+            </svg>
+            <h3>Гречка</h3>
+            <p class="price">90 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 17: Рис -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#e0e0e0">
+                <ellipse cx="50" cy="50" rx="25" ry="10" />
+            </svg>
+            <h3>Рис</h3>
+            <p class="price">80 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 18: Мясо -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#e57373">
+                <ellipse cx="50" cy="50" rx="35" ry="20" />
+            </svg>
+            <h3>Мясо</h3>
+            <p class="price">450 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 19: Груши -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#cddc39">
+                <ellipse cx="50" cy="60" rx="20" ry="30" />
+            </svg>
+            <h3>Груши</h3>
+            <p class="price">180 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+        <!-- Продукт 20: Киви -->
+        <div class="product">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#8d6e63">
+                <ellipse cx="50" cy="50" rx="20" ry="30" />
+            </svg>
+            <h3>Киви</h3>
+            <p class="price">240 ₽/кг</p>
+            <p class="weight">Вес: 1 кг</p>
+        </div>
+
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Продуктовый Магазин Онлайн. Все права защищены.</p>
+    </footer>
+
+</body>
+
+</html>
